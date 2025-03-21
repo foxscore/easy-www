@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{locale.code}}">
+
+<head>
+    <title>{{title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="application/png" href="/resources/favicon.png">
+    <!-- Alternative Locale URLs -->
+    {{#each data.locales}}
+    <link rel="alternate" hreflang="{{code}}" href="/{{code}}/{{../data.relativeURL}}" />
+    {{/each}}
+    <!-- Social -->
+    {{#if (contains with "social")}}
+    {{> social}}
+    {{/if}}
+</head>
+
+<body>
+    
+    <h1>UNDER CONSTRUCTION</h1>
+    
+    {{> content}}
+
+    <script src="/resources/js/localization.js" defer></script>
+    {{#if (contains with "scripts")}}
+    {{> scripts}}
+    {{/if}}
+
+</body>
+
+</html>
